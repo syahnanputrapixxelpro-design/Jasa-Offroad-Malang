@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Offroad Malang</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #212529;
+        }
+
+        /* Colors & Buttons */
+        .text-orange {
+            color: #f97316 !important;
+        }
+
+        .bg-orange {
+            background-color: #f97316 !important;
+        }
+
+        .btn-orange {
+            background-color: #f97316;
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-orange:hover {
+            background-color: #ea580c;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #555;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .text-green {
+            color: #2e7d32 !important;
+        }
+
+        .bg-green {
+            background-color: #2e7d32 !important;
+        }
+
+        .btn-green {
+            background-color: #2e7d32;
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 8px 24px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-green:hover {
+            background-color: #1b5e20;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 15px 0;
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #2e7d32 !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: #4b5563 !important;
+            margin: 0 10px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #2e7d32 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('img offroad/Slide18.webp') center/cover no-repeat;
+            height: 90vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-style: italic;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            color: #212529;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 40px;
+            height: 4px;
+            background-color: #f97316;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        /* Adventure Cards */
+        .adventure-card {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            background-color: #fff;
+            height: 100%;
+        }
+
+        .adventure-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .adventure-img-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .adventure-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .adventure-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .adventure-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #f97316;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .adventure-badge.green {
+            background-color: #10b981;
+        }
+
+        .adventure-badge.yellow {
+            background-color: #eab308;
+        }
+
+        .adventure-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .adventure-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            z-index: 1;
+        }
+
+        /* Live Adventure Banner */
+        .banner-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('img offroad/Slide26.webp') center/cover fixed;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin: 60px 0;
+        }
+
+        .banner-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .banner-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Fleet Cards */
+        .fleet-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fleet-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .fleet-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .fleet-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fleet-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #212529;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fleet-tag {
+            font-size: 0.75rem;
+            background: rgba(249, 115, 22, 0.1);
+            color: #f97316;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .fleet-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .fleet-features li {
+            margin-bottom: 10px;
+            color: #6b7280;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fleet-features li i {
+            color: #f97316;
+        }
+
+        .btn-fleet {
+            width: 100%;
+            border: 1px solid #e5e7eb;
+            background: white;
+            color: #f97316;
+            font-weight: 700;
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-fleet:hover {
+            background: #f97316;
+            color: white;
+            border-color: #f97316;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #f3f4f6;
+            padding: 60px 0 20px;
+            background-color: #ffffff;
+        }
+
+        .footer-brand {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #f3f4f6;
+            color: #4b5563;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        .footer-title {
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #2e7d32;
+        }
+
+        .footer-contact li {
+            display: flex;
+            margin-bottom: 15px;
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact i {
+            color: #2e7d32;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .newsletter-input {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px 15px;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .btn-subscribe {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #1b5e20;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #f3f4f6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .footer-bottom-links a {
+                margin: 0 10px;
+            }
+        }
+
+        /* Floating Buttons */
+        .floating-btn-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .btn-up {
+            background-color: #2e7d32;
+        }
+
+        .btn-up:hover {
+            background-color: #1b5e20;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-wa {
+            background-color: #25d366;
+        }
+
+        .btn-wa:hover {
+            background-color: #128c7e;
+            color: white;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-green" href="index.html">
+                <i class="bi bi-geo-alt-fill me-2 text-warning"></i>JASA OFFROAD MALANG
+            </a>
+            <button class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paket">Paket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+                <div class="d-flex mt-3 mt-lg-0">
+                    <a href="https://wa.me/6282211221909" class="btn btn-green w-100 text-center">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Taklukkan<br><span class="text-orange">Alam Bebas</span></h1>
+            <p class="hero-subtitle">Rasakan petualangan offroad terbaik menyusuri keindahan alam liar Malang. Tidak ada
+                jalan, tidak ada batas.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="https://wa.me/6282211221909" class="btn btn-orange btn-lg text-uppercase">Mulai
+                    Perjalanan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Choose Your Adventure -->
+    <section class="container py-5">
+        <h2 class="section-title">Pilih Petualangan Anda</h2>
+        <p class="text-muted mb-5 max-w-700">Ekspedisi kami dirancang untuk berbagai tingkat pengalaman. Dari menyusuri
+            hutan pinus hingga menaklukkan lumpur ekstrem.</p>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="adventure-card">
+                    <div class="adventure-img-wrapper">
+                        <span class="adventure-badge green">Beginner Friendly</span>
+                        <img src="img offroad/Slide25.webp" alt="Forest Trail">
+                        <div class="adventure-overlay"></div>
+                        <h3 class="adventure-title">Jalur Hutan</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="adventure-card">
+                    <div class="adventure-img-wrapper">
+                        <span class="adventure-badge">Medium Track</span>
+                        <img src="img offroad/Slide27.webp" alt="Mountain Peak">
+                        <div class="adventure-overlay"></div>
+                        <h3 class="adventure-title">Puncak Gunung</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="adventure-card">
+                    <div class="adventure-img-wrapper">
+                        <span class="adventure-badge yellow">Extreme 4x4</span>
+                        <img src="img offroad/Slide28.webp" alt="Mud Baths">
+                        <div class="adventure-overlay"></div>
+                        <h3 class="adventure-title">Kubangan Lumpur</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="adventure-card">
+                    <div class="adventure-img-wrapper">
+                        <span class="adventure-badge text-dark bg-light">Scenic View</span>
+                        <img src="img offroad/Slide29.webp" alt="Savanna">
+                        <div class="adventure-overlay"></div>
+                        <h3 class="adventure-title">Sabana Bromo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner-section">
+        <div class="container">
+            <h2 class="banner-title">Hidupkan Jiwa <span class="text-orange">Petualangmu</span></h2>
+            <p class="banner-text">Uji nyalimu bersama para ahli di lanskap paling menantang. Kami sediakan armadanya,
+                kamu yang bawa nyalinya.</p>
+            <button class="btn btn-orange btn-lg px-5 rounded-pill text-uppercase">Jelajahi Ekspedisi</button>
+        </div>
+    </section>
+
+    <!-- Meet The Fleet -->
+    <section id="paket" class="container py-5 mb-5">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <div>
+                <h2 class="section-title mb-3">Kenali Armada Kami</h2>
+                <p class="text-muted m-0">Kendaraan 4x4 yang telah dimodifikasi secara profesional, siap menghadapi
+                    medan terberat.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Fleet 1 -->
+            <div class="col-md-4">
+                <div class="fleet-card">
+                    <img src="img offroad/Slide30.webp" alt="The Titan" class="fleet-img">
+                    <div class="fleet-body">
+                        <h3 class="fleet-title">The Titan <span class="fleet-tag">Hardtop FJ40</span></h3>
+                        <ul class="fleet-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Ban M/T 35 Inch</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Suspensi Offroad 4-inch</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Winch Heavy Duty</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Fleet 2 -->
+            <div class="col-md-4">
+                <div class="fleet-card">
+                    <img src="img offroad/Slide58.webp" alt="The Crawler" class="fleet-img">
+                    <div class="fleet-body">
+                        <h3 class="fleet-title">The Crawler <span class="fleet-tag">Jimny 4x4</span></h3>
+                        <ul class="fleet-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Loker Depan & Belakang</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sistem Snorkel</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Bodi Ringan & Gesit</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Fleet 3 -->
+            <div class="col-md-4">
+                <div class="fleet-card">
+                    <img src="img offroad/Slide64.webp" alt="The Nomad" class="fleet-img">
+                    <div class="fleet-body">
+                        <h3 class="fleet-title">The Nomad <span class="fleet-tag">Taft GT 4x4</span></h3>
+                        <ul class="fleet-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Rak Atap Kokoh</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Kapasitas Tangki Ekstra</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Lampu Sorot LED</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-brand"><i class="bi bi-geo-alt-fill text-warning me-2"></i>JASA OFFROAD MALANG
+                    </h4>
+                    <p class="footer-p">Menciptakan momen tak terlupakan di alam bebas. Berpengalaman di bidang team
+                        building, kegiatan korporat, edukasi sekolah, dan wisata keluarga.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kontak -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Kontak Kami</h5>
+                    <ul class="footer-links footer-contact">
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Kota Malang, Jawa Timur
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            +62 822-1122-1909
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            halo@jasaoffroadmalang.com
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Layanan -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Team Building</a></li>
+                        <li><a href="#">Rafting</a></li>
+                        <li><a href="#">Paintball</a></li>
+                        <li><a href="#">Offroad Jeep</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="footer-p mb-3">Berlangganan untuk tips liburan dan penawaran eksklusif.</p>
+                    <form action="#">
+                        <input type="email" class="newsletter-input" placeholder="Alamat email Anda" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Jasa Offroad Malang. All rights reserved.</div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btn-container">
+        <a href="#" class="floating-btn btn-up" id="btnBackToTop" title="Back to top">
+            <i class="bi bi-chevron-up"></i>
+        </a>
+        <a href="https://wa.me/6282211221909" target="_blank" class="floating-btn btn-wa" title="WhatsApp Us">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top functionality
+        const btnBackToTop = document.getElementById('btnBackToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                btnBackToTop.style.opacity = '1';
+                btnBackToTop.style.pointerEvents = 'auto';
+            } else {
+                btnBackToTop.style.opacity = '0';
+                btnBackToTop.style.pointerEvents = 'none';
+            }
+        });
+
+        btnBackToTop.style.opacity = '0';
+        btnBackToTop.style.transition = 'opacity 0.3s ease';
+
+        btnBackToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
